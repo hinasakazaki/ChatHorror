@@ -295,6 +295,7 @@ const SCRIPT_GROUP = [
 ['EFFECT', 'BLOOD', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
 
+['', 'Sunday May 3 11:02AM', '', 1, false], 
 ['Rin', 'I just talked to Ari\'s roommate', '', 1, false], 
 ['Rin', 'She said her corpse looked dried up', '', 1, false], 
 ['Rin', 'Like an overcooked roasted turkey', '', 1, false], 
@@ -331,7 +332,7 @@ const SCRIPT_GROUP = [
 ['', 'Tuesday May 5 11:48AM', '', 1, false], 
 
 ['Lottie', 'Heyyy ladies!!! Ready for breaking some sweat with hot yoga at lunchtime!??!', '', 1, false],
-['Reena', 'I\'m feeling a little unsettled after hearing disturbing story about how some hobbyist bodybuilders passed away in extremely disturbing ways.', '', 1, false],
+['Reena', 'I\'m feeling a little unsettled after hearing disturbing story about how some bodybuilders passed away in extremely disturbing ways.', '', 1, false],
 ['Sam', 'Yeah yeah I heard about it too', '', 1, false],
 ['Sam', 'They were found dead all wearing some band on their arm right?', '', 1, false],
 ['Sam', 'Just regular old bands made of silicone', '', 1, false],
