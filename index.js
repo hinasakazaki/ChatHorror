@@ -187,7 +187,7 @@ const SCRIPT_GROUP = [
 ['Rin', 'Not sure if this is amazing or scary', '', 1, false], 
 ['Rin', 'I just ran 30 miles without taking a break', '', 1, false], 
 ['Arnold', 'Make sure to consume at least 3000 calories.', '', 1, false], 
-['Rin', 'I feel... invincible?', '', 1, false], 
+['Rin', 'I feel... invincible?', '', 1, false], // 159? 
 ['Arnold', 'Make sure to consume at least vﾔvﾔvﾔvﾔ 瘍vﾔcｷh・ｵﾊ・/ ・ﾖﾚYﾗk・・<・4ﾜ搗ｼ~', '', 1, false], 
 ['Arﾅ}od', '{ﾃﾏ・蝣ﾓ｣ﾟ%ﾔ珒ｺla"	ﾏ・a岐?・&・-畦ｱﾝﾈ<｡7ｬrﾅ}ﾀ篝ぴ・eﾂ~c\]DYﾈNHQ髴ﾗD・・d・_覆・ｷｸｵｰﾜ_ﾈ・・・ 榘非・菠的ｨQﾓ=}kﾏuﾟ獄}｡ｦ]・隴\ｬﾟﾓｭs:7険ｼSzﾒGｵWw偈;｡・ﾙ剰?Jｨ礦ﾕ蝪ﾍﾊ{ﾍｶｭ抛ﾚ・ｿ-ｬ｢oｼ;ｳ・ ・kﾟt・・iﾌｩﾈW・ｿ竊升Oｴ6ｭ|ﾜﾍ4C	t1・ﾖ溪ﾍC]ｶ・磊ｳｳcn瞿・ｭ｣υ・会杖&;;-ｳ]4lﾍ・Aw浣zv吶ﾘ皦o突V$$@茁=>lgJﾝ・華顕・^ﾙj・4&ｽp霧~輊1ｨ脛懿~・懺ﾍﾏ京o・h\・ｭ躪・解F ｺﾃ・ﾕ・ﾌ端\I其3ﾀ・coｽモﾐ期wNスﾓﾇ仄・薑ﾍ嬰Q・7躾W涖・停I<E・ﾒｪ倶・ﾖQｲ舍・ｰ撫D]9ﾙﾘ・}ﾆ轄.6/ﾌﾜ框ﾅ餡贋FU5・C懴La匂胝ｩNoｯ萃=ｸｫｫ早?ｼ{Q', '', 1, false], 
 ['EFFECT', 'REMOVE', 2, 1, false],
@@ -246,7 +246,7 @@ const SCRIPT_GROUP = [
 ['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
 ['Arﾅ}od', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
 ['Wade', 'fucking bugged', '', 1, false],
-['Wade', 'im gonna kick it out, maybe itll refresh', '', 1, false],
+['Wade', 'im gonna kick it out', '', 1, false],
 ['', 'Wade removed Arnold from 💪Swole Squad🥊🐜🥗', '', 1, false],
 ['', 'Arnold has entered 💪Swole Squad🥊🐜🥗', '', 1, false],
 ['Wade', 'ari did you add it back?', '', 1, false],
@@ -274,7 +274,7 @@ const SCRIPT_GROUP = [
 ['Wade', 'gonna go hit the gym', '', 1, false],
 ['Wade', 'cant sit still', '', 1, false],
 ['Ari', 'I\'m gonna try to sleep again but I get so hungry', '', 1, false],
-['Ari', 'Go smoke pot or something. Maybe it\'ll calm me down', '', 1, false],
+['Ari', 'Gonna grab a wine or something. Maybe it\'ll calm me down', '', 1, false],
 ['Arnold', 'This is very exciting!', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false],
 ['EFFECT', 'REMOVE', 2, 1, false],
@@ -351,13 +351,15 @@ const SCRIPT_GROUP = [
 ['Lottie', 'It\'s called Ari.', '', 1, false],
 
 /* END GAME */
+['EFFECT', 'BLACK_SCREEN', '', 1, false], 
+['EFFECT', 'CLEAR_SCREEN', '', 1, false], 
 ['EFFECT', 'CLEAR_CHAT', '', 1, false], 
 ['EFFECT', 'SET_CHAT', 'Thank you for playing 🎉🎉🎉', 1, false], 
 
 ['hinerz', 'Thank you for playing!', '', 1, false], 
 ['hinerz', 'In the current story there\'s no way to get out alive but I hope I can add that sometime in the future!', '', 1, false], 
 
-['hinerz', 'The programming, music, and most of the images were done by me, hinerz, in under 2 days for the Ludum Dare 48 hour game jam.', '', 1, false], 
+['hinerz', 'The programming, music, and most of the images were done by me, hinerz, in under 48 hours (possibly more like 20) for the Ludum Dare game jam.', '', 1, false], 
 ['hinerz', 'Thankfully, I did not have to lose any sleep... 😊', '', 1, false], 
 ['hinerz', 'So I can be ready and healthy for my second COVID vaccine tomorrow!', '', 1, false], 
 
@@ -367,8 +369,7 @@ const SCRIPT_GROUP = [
 ['hinerz', 'and wirestock for their image of lions on www.freepik.com', '', 1, false], 
 ['hinerz', 'Finally, the web design for this game was built on the basics by', '', 1, false], 
 ['hinerz', 'Sajad Hashemian\'s chat example at https://codepen.io/sajadhsm/pen/odaBdd', '', 1, false], 
-
-['hinerz', 'Feel free to refresh the page to play again!', '', 1, false], 
+['hinerz', 'Feel free to refresh the page to play again!', '', 1, false]
 ];
 let INDEX_GROUP = 0;
 
@@ -384,17 +385,84 @@ let REMOVING = false
 let last_body_html = '';
 blackScreen.style.display = "none";
 
-let send_sound = new Audio('audio/send.wav');
-let normal_alert = new Audio('audio/alert.wav');
-let distorted_alert = new Audio('audio/distorted-alert.wav');
-let very_distorted_alert = new Audio('audio/very-distorted-alert.wav');
+const send_sound = new Audio('audio/send.wav');
+const normal_alert = new Audio('audio/alert.wav');
+const distorted_alert = new Audio('audio/distorted-alert.wav');
+const very_distorted_alert = new Audio('audio/very-distorted-alert.wav');
+const noise = new Audio('audio/noise.wav');
+const unsettling_level_0 = new Audio('audio/unsettling-level0.wav');
+const unsettling_level_1 = new Audio('audio/unsettling-level1.wav');
+const want_to_be_swole = new Audio('audio/want-to-be-swole.wav');
 function playAlert(characterName) {
     audio = normal_alert;
     if (characterName == "Arﾅ}od") {
         audio = very_distorted_alert;
     }
-    audio.volume = 0.2
+    dice = Math.random();
+    if (INDEX >= 138 && INDEX < 286) {
+        if (dice < 0.1) {
+            audio = distorted_alert;
+        } else if (dice < 0.12) {
+            console.log("suepr distort")
+            audio = very_distorted_alert;
+        }
+    }
+    if (INDEX >= 193 && INDEX < 286) { // Ari & Wade start experiencing symptons
+        if (dice < 0.3) {
+            audio = distorted_alert;
+        } else if (dice < 0.32) {
+            console.log("super distort")
+            audio = very_distorted_alert;
+        }
+    }
+    audio.volume = 0.2;
     audio.play();
+}
+
+const WHY_CANT_WE_KICK_IT_OUT = 220;
+const OH_NO = 255;
+const THIS_IS_SCARY = 260;
+const IM_GOING_TO_DIE = 261;
+const YOGA_TIME = 286;
+const ITS_ARI = 305;
+const STORYTIME_IS_OVER = 307;
+const GAME_IS_OVER = 321;
+
+function doGameWideStuff() {
+    /** For audio and other big things*/
+    if (INDEX == WHY_CANT_WE_KICK_IT_OUT) {
+        //noise
+        noise.volume = 0.1;
+        noise.loop = true;
+        noise.play();
+    }
+    if (INDEX == OH_NO) {// Off the deep end)
+        noise.pause();
+        unsettling_level_0.loop;
+        unsettling_level_0.play();
+    }
+    if (INDEX == THIS_IS_SCARY) {// Off the deep end)
+        unsettling_level_1.loop = true;
+        unsettling_level_1.volume = 0.3;
+        unsettling_level_1.play();
+    }
+    if (INDEX == IM_GOING_TO_DIE) {
+        want_to_be_swole.loop =true;
+        want_to_be_swole.play();
+    }
+    if (INDEX == YOGA_TIME ) {
+        want_to_be_swole.pause()
+        unsettling_level_1.pause()
+    }
+    if (INDEX == ITS_ARI) {
+        noise.volume = 0.1;
+        noise.loop = false;
+        noise.play();
+    }
+    if (INDEX == STORYTIME_IS_OVER) {
+        noise.pause();
+        realLifeTime();
+    }
 }
 
 const PLAYABLE_CHARACTER_NAME = 'Longwei'
@@ -423,7 +491,7 @@ function realLifeTime() {
     var now = new Date();
     time.innerHTML = now.getHours() + ':' + (now.getMinutes()<10?'0':'') + now.getMinutes();
     // call this function again in 1000ms
-    setTimeout(updateClock, 1000);
+    setTimeout(realLifeTime, 1000);
 }
 
 let currScrollTop = 0;
@@ -437,36 +505,48 @@ blackScreen.addEventListener("click", event => {
 });
 
 function clickEvent() {
-  if (REMOVING) {
+   console.log(INDEX);
+  if (REMOVING || INDEX == GAME_IS_OVER) {
     return;
   }
+  doGameWideStuff();
   const charName = SCRIPT[INDEX][0];
   if (charName == "") {
-      addAdminNotice(SCRIPT[INDEX][1]);
+      const notice = SCRIPT[INDEX][1];
+      addAdminNotice(notice);
+      if (notice.includes("PM") || notice.includes("AM")) {
+          time.innerHTML = notice.substring(notice.length-7, notice.length-2);
+      }
       INDEX += SCRIPT[INDEX][3];
+      clickEvent();
   }
   else if (charName == "EFFECT") {
+  console.log(SCRIPT[INDEX]);
       const effectName = SCRIPT[INDEX][1]
       if (effectName == 'REMOVE') {
           REMOVING = true;
           numberOfChatsToRemove = SCRIPT[INDEX][2];
-          removeChatBubbles(2);
+          removeChatBubbles(numberOfChatsToRemove);
+          INDEX += SCRIPT[INDEX][3];
+          clickEvent();
       }
-      if (effectName == 'BLACK SCREEN') {
-        delay = 0;
-        setTimeout(() => {
-            fullScreen.style.display="none";
-            blackScreen.style.display="block";
-            blackScreen.style.zIndex = "1";
-        }, delay);
+      if (effectName == 'BLACK_SCREEN') {
+        fullScreen.style.display="none";
+        blackScreen.style.display="block";
+        fullScreen.style.zIndex = "0"
+        blackScreen.style.zIndex = "1";
+        INDEX += SCRIPT[INDEX][3];
       }
-      else if (effectName == 'FADE IN') {
-          console.log('fading in')
+      if (effectName == 'CLEAR_SCREEN') {
           blackScreen.style.display= "none";
-          fullScreen.style.display="block";
-          blackScreen.style.zIndex = "-1";
+          fullScreen.style.display = "flex";
+          blackScreen.style.zIndex = "0";
+          fullScreen.style.zIndex = "1"
+          INDEX += SCRIPT[INDEX][3];
+          clickEvent();
       }  
-      else if (effectName == 'BLOOD') {
+      
+      if (effectName == 'BLOOD') {
         bloodHTML = `<div class="overlay"><img src="images/blood.png"></div>`;
         fullScreen.insertAdjacentHTML("beforebegin", bloodHTML);
         delay = 100
@@ -476,14 +556,19 @@ function clickEvent() {
                 overlay.parentNode.removeChild(overlay);
             }
         }, delay);  
+        INDEX += SCRIPT[INDEX][3];
+        clickEvent();
       }
-      else if (effectName == 'CLEAR_CHAT') {
-          removeChatBubbles(0);
+      if (effectName == 'CLEAR_CHAT') {
+        removeChatBubbles(0);
+        INDEX += SCRIPT[INDEX][3];
+        clickEvent();
       }   
-      else if (effectName == 'SET_CHAT') {
+      if (effectName == 'SET_CHAT') {
         title.innerHTML = SCRIPT[INDEX][2];
+        INDEX += SCRIPT[INDEX][3];
+        clickEvent();
       }
-      INDEX += SCRIPT[INDEX][3];
   }
   else if (charName == PLAYABLE_CHARACTER_NAME) {
       console.log("FILL CHOICES");
@@ -507,8 +592,7 @@ function fillChoices(choices, results) {
   choices.forEach((item, index) => choicesHTML += (createOption(item, index)));
   inputContainer.innerHTML = choicesHTML;
   msgerChat.scrollTop += 500;
-  console.log("FILLED CHOICES, NOW ADD FORM");
-  document.querySelectorAll('.msger-inputarea').forEach(element=> 
+  document.querySelectorAll('.msger-inputarea-choice').forEach(element=> 
     element.addEventListener("click", event => {
       charName = PLAYABLE_CHARACTER_NAME
       event.preventDefault();
@@ -516,7 +600,7 @@ function fillChoices(choices, results) {
       const index = element.querySelector(".msger-input").name;
       if (!msgText) return;
       appendMessage(charName, CHARACTERS[charName], "right", msgText);
-      audio.play();
+      send_sound.play();
       console.log("Selected index ", index);
       console.log("Results ", results);
       INDEX += results[index];
@@ -554,8 +638,8 @@ function clearOptions() {
 
 function createOption(item, index) {
    const choiceHTML =  `
-  <form class="msger-inputarea">
-    <input type="text" class="msger-input" value="${item}" name=${index} readonly>
+  <form class="msger-inputarea-choice">
+        <input type="text" class="msger-input" value="${item}" name=${index} readonly>
   </form>
   `;
   return choiceHTML;
@@ -571,7 +655,7 @@ function appendMessage(name, img, side, text, image_path) {
       <div class="msg-bubble">
         <div class="msg-info">
           <div class="msg-info-name">${name}</div>
-          <div class="msg-info-time">${formatDate(new Date())}</div>
+          <div class="msg-info-time">${time.innerHTML}</div>
         </div>`;
   console.log(image_path);
   if (image_path) {
@@ -590,12 +674,11 @@ function appendMessage(name, img, side, text, image_path) {
 }
 
 function removeChatBubbles(number_to_remove) {
-    if (!number_to_remove) {
+    if (number_to_remove < 1) {
         number_to_remove = chatArea.childNodes.length;
     }
-    for (let i = 1; i <= number_to_remove*2; i++) {
+    for (let i = 1; i <= number_to_remove*2 && chatArea.childNodes.length-1 > 0; i++) {
         let children = chatArea.childNodes
-        console.log(children);
         chatArea.removeChild(children[children.length-1]);
     }
     REMOVING = false;
@@ -604,13 +687,6 @@ function removeChatBubbles(number_to_remove) {
 // Utils
 function get(selector, root = document) {
   return root.querySelector(selector);
-}
-
-function formatDate(date) {
-  const h = "0" + date.getHours();
-  const m = "0" + date.getMinutes();
-
-  return `${h.slice(-2)}:${m.slice(-2)}`;
 }
 
 function random(min, max) {

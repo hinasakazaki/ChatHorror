@@ -5,6 +5,7 @@
   --border: 2px solid #ddd;
   --left-msg-bg: #ececec;
   --right-msg-bg: #579ffb;
+  --choice-color: #aacefd;
 }
 
 html {
@@ -154,11 +155,24 @@ img {
 .msger-input-container {
 }
 
+.msger-inputarea-choice {
+  display: flex;
+  padding: 10px;
+  border-top: var(--border);
+  background: var(--choice-color);
+}
+.msger-inputarea-choice * {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
 .msger-inputarea {
   display: flex;
   padding: 10px;
   border-top: var(--border);
-  background: #eee;
+  background: #f0f6ff;
 }
 .msger-inputarea * {
   padding: 10px;
@@ -168,7 +182,7 @@ img {
 }
 .msger-input {
   flex: 1;
-  background: #ddd;
+  background: #f0f6ff;
   color: #676767;
 }
 .msger-input:hover {
