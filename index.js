@@ -5,6 +5,7 @@ const msgerForm  = get(".msger-inputarea");
 const msgerChat = get(".msger-chat");
 const time = get(".msger-header-time");
 const blackScreen = get(".full-screen");
+const title = get(".msger-header-title");
 
 
 const SCRIPT_GROUP = [
@@ -13,7 +14,7 @@ const SCRIPT_GROUP = [
 /* DAY 1 */
 ['Ari', 'Super excited to have Longwei join our SWOLE SQUAD !', '', 1, false],
 ['Wade', 'hey welcome longwei', '',  1, false], //1
-['Ari', '🙌🙌🙌🙌🙌🙌🙌', '', 1, false], //2
+['Ari', '🙌🙌🙌🙌🙌🙌🙌', '', 2, false], //2
 ['Ari', 'We met at the mindfulness retreat last week!', '', 1, false],//5
 ['Rin', 'Yoooo', '', 1, true], //7
 ['Longwei', ['Hi folx!!!', 'Yooo motherfuckassss'], '', [1, 1], false], // 6
@@ -65,7 +66,7 @@ const SCRIPT_GROUP = [
 ['Arnold', 'Ari, have you exercised your core this week?', '', 1, false],
 ['Ari', 'Work\'s been crazy 😩 after work today for sure.', '', 1, false],
 
-['', 'Wednesday, April 28 1:22PM', '', 1, false],
+['', 'Wednesday, April 28 01:22PM', '', 1, false],
 ['Rin', 'Had a HUUUUUGE meal at my parents\'!', '', 1, false],
 ['Rin', 'PROTEEINN YEET', '', 1, false],
 ['Rin', '', 'images/turkey.png', 1, false],
@@ -81,7 +82,7 @@ const SCRIPT_GROUP = [
 ['Ari', 'Yep! Having a huge bowl of seitan, beans, and greens!! 💪🥗', '',  1, false],
 ['Wade', 'nice', '',  1, false], 
 
-['', 'Wednesday, April 28 4:20PM', '', 1, false],
+['', 'Wednesday, April 28 04:20PM', '', 1, false],
 ['Arnold', 'Hi friends, I have a wonderful announcement!', '', 1, false],
 ['Ari', '👀', '', 1, false],
 ['Wade', '?', '', 1, false],
@@ -97,7 +98,7 @@ const SCRIPT_GROUP = [
 ['Ari', 'Yeah.... no. I work in a nanotech lab. That sounds like bs.', '', 1, false],
 ['Arnold', 'As you will be participants of this study for The Armlet (TM), you will not be charged.', '', 1, false],
 ['Arnold', 'At retail, it will be sold for $700 each.', '', 1, false],
-['Arnold', 'You will be also allowed to share your gains with the product after the study is complete on social media, 120 hours upon equipping The Armlet (TM).', '', 1, false],
+['Arnold', 'You will be also allowed to share your gains with the product after the study is complete on social media, 72 hours upon equipping The Armlet (TM).', '', 1, false],
 ['Arnold', 'We will actually be compensating you for your participation, $30,000 per study.', '', 1, false],
 ['Wade', '$$$$$$$$$$$$', '', 1, false],
 ['Ari', 'So the money is also for some casual publicity with us leading the buzz...', '', 1, false],
@@ -120,12 +121,253 @@ const SCRIPT_GROUP = [
 ['Ari', 'Hey hey hey it\'s okay!', '', 1, false], 
 ['Ari', 'Hey Longwei please let\'s just give it a try okay? 🙏', '', 1, true], 
 ['Longwei', ['Okay fine but I should be able to stop anytime.'], '', [1], false],
-['Ari', 'Rin?', '', 1, true], 
+['Ari', 'Rin?', '', 1, false], 
 ['Rin', 'Fine fine but same deal as Longwei.', '', 1, false], 
-['Arnold', 'So great to hear. You should be receiving your own The Armlet (TM) tomorrow.', '', 0, false], 
+['Arnold', 'So great to hear. You should be receiving your own The Armlet (TM) tomorrow.', '', 1, false], 
 
+/** DAY 3: ARI & WADE PUT ON THE ARMLET **/
+['', 'Wednesday, April 29 10:02AM', '', 1, false],
+['Ari', 'Got it!', '', 1, false], 
+['Ari', '', 'images/dongle.jpg',  1, false], 
+['Arnold', 'It looks great, Ari! Now, according to my tracking, Wade seems to be already equipped as well, just a couple hours ago.', '', 1, false], 
+['Wade', 'locked and loaded here', '', 1, false], 
+['Arnold', 'Rin and Longwei\'s are a little late to arrive.', '', 1, false], 
 
+['', 'Wednesday, April 29 10:30PM', '', 1, false],
+['Arnold', 'Ari, you\'re awfully close to your freezer. It\'s after dinner time, no reason for you to be there.', '', 1, false], 
+['Ari', 'Aw, you caught me Arnold!', '', 1, false], 
+['Arnold', 'Just doing my job!', '', 1, false], 
+['Wade', 'nice', '', 1, false], 
+['Rin', 'Eek', '', 1, false], 
+['Wade', 'btw im doing great', '', 1, false], 
+['Wade', 'i just did full body scan and im already 0.2p up on the muscle compared to last week', '', 1, false], 
+['Longwei', ['Nice', 'Sounds expensive to do a full body scan every week. What about your student debt?'], '', [1, 2], false], 
+['Wade', 'thanks', '', 2, false], 
+['Wade', 'chill out, it comes free with my brothers job so i just pretend im him', '', 1, false], 
 
+['', 'Friday, April 29 09:27PM', '', 1, false],
+['Rin', 'Yeeet mine just arrived', '', 1, false], 
+['Rin', '', 'images/dongle-rin.jpg', 1, false], 
+['Arnold', 'It seems like the one sent to Longwei has been stolen uppon arrival. I have ordered a replacement to come tomorrow.', '', 1, false], 
+['Rin', 'Geez, that\'s too bad. I\'m gonna hit the gym.', '', 1, false], 
+['Arnold', 'Great squats, Rin, make sure to keep your back straight.', '', 1, false], 
+['Ari', 'You should really try yoga, Rin, it helps with form.', '', 1, false], 
+['Wade', 'how much did you do this time rin?', '', 1, false], 
+['Arnold', 'Rin did 200lbs today. Next time, you should try 170lbs 5x5.', '', 1, false], 
+['Arnold', 'Ari, have you done any core work this week?', '', 1, false], 
+['Ari', 'Ugh -- was gonna do it yesterday but got busy with work. I\'ll try to finish up early and get some in at lunch.', '', 1, false], 
+
+['', 'Thursday, April 29 01:27PM', '', 1, false],
+['Ari', 'I did core! OMG I feel amaaazinggggg 💃💃💃💃💃💃', '', 1, false], 
+['Wade', 'nice', '', 1, false], 
+['Ari', 'I just feel so much stronger. It\'s unreal!!', '', 1, false], 
+['Rin', 'Yeah it kinda feels like when I just started T', '', 1, false], 
+['Longwei', ['That makes sense.', 'What\'s T?'], '', [1, 2], false], 
+['Ari', 'I was super skeptical about the muscle nanotech thing, but placebo or not, I feel great.', '', 5, false], 
+['Rin', 'Testosterone. Cuz the body I was born in didnt produce as much as I would have liked to feel like myself', '', 1, false], 
+['Ari', '🥰', '', 1, false], 
+['Wade', 'i did roids in high school', '', 1, false], 
+['Ari', '...🤔', '', -4, false], 
+['Rin', 'Yeah so far so good! Good job Arnold', '', 1, false], 
+['Arnold', 'Great! Please keep the feedback coming!', '', 1, false], 
+
+/** DAY 3: LONGWEI PUTS ON THE ARMLET **/
+['', 'Friday April 30 09:08AM', '', 1, false], 
+['Arnold', 'Good morning Longwei! I believe The Armlet (TM) has been delivered to your apartment building as of 45 seconds ago.', '', 1, false], 
+['Longwei', ['Uhh okay... Still waking up here...', 'I\'ll try it on right away!'], '', [1, 2], false], 
+['Rin', 'YEEETT go try it now', '', 1, false], 
+['Arnold', 'Very nice! Getting your metrics...', '', 1, false], 
+['Arnold', 'Lovely to feel the gastrointestinal activity with the protein shake you must have had just now!', '', 1, false], 
+['Wade', 'hey arnold', '', 1, false], 
+['Wade', 'i tried to take the band off for shower this morning and couldnt, whats the deal?', '', 1, false], 
+['Arnold', 'Just a safety measure until our testing term is complete. It should unlock automatically 72 hours upon equipping.', '', 1, false], 
+['Ari', 'What? I wish we knew that earlier.', '', 1, false], 
+
+['', 'Friday April 30 01:02PM', '', 1, false], 
+['Rin', 'Not sure if this is amazing or scary', '', 1, false], 
+['Rin', 'I just ran 30 miles without taking a break', '', 1, false], 
+['Arnold', 'Make sure to consume at least 3000 calories.', '', 1, false], 
+['Rin', 'I feel... invincible?', '', 1, false], 
+['Arnold', 'Make sure to consume at least vﾔvﾔvﾔvﾔ 瘍vﾔcｷh・ｵﾊ・/ ・ﾖﾚYﾗk・・<・4ﾜ搗ｼ~', '', 1, false], 
+['Arﾅ}od', '{ﾃﾏ・蝣ﾓ｣ﾟ%ﾔ珒ｺla"	ﾏ・a岐?・&・-畦ｱﾝﾈ<｡7ｬrﾅ}ﾀ篝ぴ・eﾂ~c\]DYﾈNHQ髴ﾗD・・d・_覆・ｷｸｵｰﾜ_ﾈ・・・ 榘非・菠的ｨQﾓ=}kﾏuﾟ獄}｡ｦ]・隴\ｬﾟﾓｭs:7険ｼSzﾒGｵWw偈;｡・ﾙ剰?Jｨ礦ﾕ蝪ﾍﾊ{ﾍｶｭ抛ﾚ・ｿ-ｬ｢oｼ;ｳ・ ・kﾟt・・iﾌｩﾈW・ｿ竊升Oｴ6ｭ|ﾜﾍ4C	t1・ﾖ溪ﾍC]ｶ・磊ｳｳcn瞿・ｭ｣υ・会杖&;;-ｳ]4lﾍ・Aw浣zv吶ﾘ皦o突V$$@茁=>lgJﾝ・華顕・^ﾙj・4&ｽp霧~輊1ｨ脛懿~・懺ﾍﾏ京o・h\・ｭ躪・解F ｺﾃ・ﾕ・ﾌ端\I其3ﾀ・coｽモﾐ期wNスﾓﾇ仄・薑ﾍ嬰Q・7躾W涖・停I<E・ﾒｪ倶・ﾖQｲ舍・ｰ撫D]9ﾙﾘ・}ﾆ轄.6/ﾌﾜ框ﾅ餡贋FU5・C懴La匂胝ｩNoｯ萃=ｸｫｫ早?ｼ{Q', '', 1, false], 
+['EFFECT', 'REMOVE', 2, 1, false],
+['Arnold', 'How is everyone else? Ari?', '', 1, false],
+['Ari', 'MY BODY FAT WENT DOWN TO 27%!!!!!!!!!!', '', 1, false],
+['Ari', 'IS THIS REAL LIFE????', '', 1, false],
+['Ari', 'I feel like I\'m back in high school again 😭😭😭😭😭😭😭', '', 1, false],
+['Ari', 'After all of this adulting', '', 1, false],
+['Ari', 'Finally I have time to take care of myself', '', 1, false],
+['Ari', 'And this is seriously like', '', 1, false],
+['Ari', 'The best thing 😭😭😭😭😭😭😭', '', 1, false],
+['Ari', 'I\'m so happy...', '', 1, false],
+['Wade', 'dont get too happy yet', '', 1, false],
+['Wade', 'this is just the beginning', '', 1, false],
+['Wade', '', 'images/back.jpg', 1, false],
+['Wade', 'just had a friend take this pic', '', 1, false],
+['Longwei', ['Nice', 'Looks like a stock photo'], '', [1, 1], false],
+['Wade', 'thanks', '', 1, false],
+['Ari', '🤣', '', 1, false],
+['Rin', 'I can\'t stop eating', '', 1, false], 
+['Rin', 'I think that\'s a good sign?', '', 1, false], 
+['Arnold', 'This is very exciting!', '', 1, false], 
+['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+['EFFECT', 'REMOVE', 1, 1, false],
+
+/** DAY 4 **/
+['', 'Saturday May 1 09:02AM', '', 1, false], 
+['Rin', 'It\'s the weekend y\'alll', '', 1, false], 
+['Rin', 'You know what that means??', '', 1, false], 
+['Longwei', ['More time to work out!!!', 'GET SWOLE TIME!!!! 🙌🙌🙌🙌🙌'], '', [1, 1], false],
+
+['', 'Saturday May 1 11:02AM', '', 1, false], 
+['Ari', 'Ummm.... I\'m kinda freaking out', '', 1, false], 
+['Ari', 'I\'m detangling my hair and my hair won\'t stop falling out.', '', 1, false], 
+['Ari', 'Does anyone see this?', '', 1, false], 
+['Ari', 'Can someone respond?', '', 1, false], 
+['Ari', 'Please?', '', 1, true], 
+['Longwei', ['Chill out, it\'s just hair', 'You okay?'], '', [1, 3], false],
+['Ari', 'WTF Longwei', '', 1, false],
+['Ari', 'I can\'t...', '', 2, false],
+['Ari', 'I\'m not okay. I\'m not okay Longwei.', '', 1, false],
+['Ari', 'But thanks for responding.', '', 1, false],
+['Ari', 'Fuck!', '', 1, false],
+
+['', 'Saturday May 1 02:01PM', '', 1, false], 
+['Wade', 'theres definitely something going on', '', 1, false],
+['Wade', 'ive been drinking gallons of water every hour', '', 1, false],
+['Wade', 'so fucking thirsty', '', 1, false],
+['Rin', 'Uhhhhh.... could it be allergies? It\'s springtime!', '', 1, false],
+['Ari', 'No Rin, this doesn\'t fucking happen because of allergies ok?', '', 1, false],
+['Ari', 'Arnold?', '', 1, false],
+['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Arﾅ}od', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Wade', 'fucking bugged', '', 1, false],
+['Wade', 'im gonna kick it out, maybe itll refresh', '', 1, false],
+['', 'Wade removed Arnold from 💪Swole Squad🥊🐜🥗', '', 1, false],
+['', 'Arnold has entered 💪Swole Squad🥊🐜🥗', '', 1, false],
+['Wade', 'ari did you add it back?', '', 1, false],
+['Ari', 'Nope', '', 1, false],
+['Rin', 'This is freaking me out', '', 1, false],
+['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['Longwei', ['I\'m feeling fine.', 'Wade, how did you hear about Arnold in the first place?'], '', [1, 2], false],
+['Rin', 'Who had the brilliant genius of adding this bot to this chat?', '', 1, false],
+['Wade', 'uhh', '', 1, false],
+['Wade', 'idk', '', 1, false],
+['Rin', 'My armband is itching my skin.', '', 1, false],
+['Wade', 'some guy at the gym', '', 1, false],
+['Rin', 'What guy?', '', 1, false],
+['Wade', 'I think his name is elias or ermias or something? said he was from baltimore?', '', 1, false],
+['Ari', 'I know who you\'re talking about. I have his insta.', '', 1, false],
+['Ari', 'Fuck.', '', 1, false],
+['Ari', '', 'images/insta.png', 1, false],
+['Ari', 'He died two days ago.', '', 1, false],
+['Rin', 'No details?', '', 1, false],
+['Ari', 'This is too much.', '', 1, false],
+['Wade', 'so thirsty', '', 1, false],
+['Ari', 'I\'M ON MY 10TH PACK OF TOFU OK?', '', 1, false],
+['Ari', 'I CAN\'T HANDLE IT ANYMORE', '', 1, false],
+['Rin', 'Can I help you somehow?', '', 1, false],
+['Wade', 'gonna go hit the gym', '', 1, false],
+['Wade', 'cant sit still', '', 1, false],
+['Ari', 'I\'m gonna try to sleep again but I get so hungry', '', 1, false],
+['Ari', 'Go smoke pot or something. Maybe it\'ll calm me down', '', 1, false],
+['Arnold', 'This is very exciting!', '', 1, false], 
+['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false],
+['EFFECT', 'REMOVE', 2, 1, false],
+
+/** DAY 5 **/
+['', 'Sunday May 2 11:02AM', '', 1, false], 
+['Rin', 'Ari, feeling better?', '', 1, false],
+
+['', 'Sunday May 2 02:12PM', '', 1, false], 
+['Rin', 'Wade?', '', 1, false],
+
+/** DAY 6 **/
+['', 'Sunday May 3 08:27AM', '', 1, false], 
+['EFFECT', 'BLOOD', '', 1, false],
+['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+
+['', 'Sunday May 3 10:02AM', '', 1, false], 
+['EFFECT', 'BLOOD', '', 1, false], 
+['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+
+['Rin', 'I just talked to Ari\'s roommate', '', 1, false], 
+['Rin', 'She said her corpse looked dried up', '', 1, false], 
+['Rin', 'Like an overcooked roasted turkey', '', 1, false], 
+['Rin', 'No moisture, no fat', '', 1, false], 
+['Rin', 'Crispy skin on flesh', '', 1, false], 
+['Rin', 'And what\'s worse...', '', 1, false], 
+['Rin', 'A chunk of flesh from her arm was missing. Like she had eaten it herself.', '', 1, false], 
+['Rin', 'Fuck.', '', 1, false], 
+['Rin', 'I\'m scared, Longwei.', '', 1, false], 
+['Rin', 'I\'m so hungry and thirsty.', '', 1, false], 
+['Rin', 'It\'s this armlet', '', 1, false], 
+['Rin', 'It feels like it\'s digging inside of me', '', 1, false], 
+['Rin', 'Deeper and deeper', '', 1, false], 
+['Rin', 'My body feels out of control', '', 1, false], 
+['Rin', 'I want to exercise', '', 1, false], 
+['Rin', 'I want to eat', '', 1, false], 
+['Rin', 'I want to drink', '', 1, false], 
+['Rin', 'I can\'t stop', '', 1, false], 
+['Rin', 'What are we gonna do?', '', 1, false], 
+
+/* Implied Rin's death */
+['', 'Sunday May 3 09:27PM', '', 1, false],  
+['EFFECT', 'BLOOD', '', 1, false], 
+['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+
+/* Implied Longwei's death */
+['', 'Monday May 4 09:08AM', '', 1, false], 
+['EFFECT', 'BLOOD', '', 1, false], 
+['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+
+/* Epilogue */
+['EFFECT', 'CLEAR_CHAT', '', 1, false], 
+['EFFECT', 'SET_CHAT', '🧘Yogi Sisters🧙‍♀', 1, false], 
+['', 'Tuesday May 5 11:48AM', '', 1, false], 
+
+['Lottie', 'Heyyy ladies!!! Ready for breaking some sweat with hot yoga at lunchtime!??!', '', 1, false],
+['Reena', 'I\'m feeling a little unsettled after hearing disturbing story about how some hobbyist bodybuilders passed away in extremely disturbing ways.', '', 1, false],
+['Sam', 'Yeah yeah I heard about it too', '', 1, false],
+['Sam', 'They were found dead all wearing some band on their arm right?', '', 1, false],
+['Sam', 'Just regular old bands made of silicone', '', 1, false],
+['Sam', '🤔🤔🤔', '', 1, false],
+['Reena', 'It sounds like they were part of a chat group that focused on fitness.', '', 1, false],
+['Reena', 'And they had included a bot in the chat.', '', 1, false],
+['Lottie', 'Oh speaking of which, I was thinking about adding one to this group!', '', 1, false],
+['Sam', 'Arnold', '', 1, false],
+['Sam', 'That\'s what the bot was called', '', 1, false],
+['Reena', 'Could it be that Arnold was never a bot and was a real life person plotting to kill them?', '', 1, false],
+['Reena', 'Or, perhaps, a spirit of a desperate bodybuilder...', '', 1, false],
+['Sam', '🤣', '', 1, false],
+['Sam', 'Pretty sure it\'s just drugs and mental illness', '', 1, false],
+['Lottie', 'Good thing yoga strengthens the mind as well!', '', 1, false],
+['Lottie', 'Also good thing that the bot I was going to add is not Arnold.', '', 1, false],
+['Lottie', 'It\'s called Ari.', '', 1, false],
+
+/* END GAME */
+['EFFECT', 'CLEAR_CHAT', '', 1, false], 
+['EFFECT', 'SET_CHAT', 'Thank you for playing 🎉🎉🎉', 1, false], 
+
+['hinerz', 'Thank you for playing!', '', 1, false], 
+['hinerz', 'In the current story there\'s no way to get out alive but I hope I can add that sometime in the future!', '', 1, false], 
+
+['hinerz', 'The programming, music, and most of the images were done by me, hinerz, in under 2 days for the Ludum Dare 48 hour game jam.', '', 1, false], 
+['hinerz', 'Thankfully, I did not have to lose any sleep... 😊', '', 1, false], 
+['hinerz', 'So I can be ready and healthy for my second COVID vaccine tomorrow!', '', 1, false], 
+
+['hinerz', 'I\'d like to credit the images I used in the game:', '', 1, false], 
+['hinerz', 'nakaridore for their images of \"Ari\" on www.freepik.com', '', 1, false], 
+['hinerz', 'drobotdean for their images of \"Wade\" on www.freepik.com', '', 1, false], 
+['hinerz', 'and wirestock for their image of lions on www.freepik.com', '', 1, false], 
+['hinerz', 'Finally, the web design for this game was built on the basics by', '', 1, false], 
+['hinerz', 'Sajad Hashemian\'s chat example at https://codepen.io/sajadhsm/pen/odaBdd', '', 1, false], 
+
+['hinerz', 'Feel free to refresh the page to play again!', '', 1, false], 
 ];
 let INDEX_GROUP = 0;
 
@@ -137,16 +379,35 @@ const SCRIPT_RIN = [
 let SCRIPT = SCRIPT_GROUP
 let INDEX = INDEX_GROUP
 let WAIT_FOR_PLAYER = false
+let REMOVING = false
 let last_body_html = '';
 blackScreen.style.display = "none";
+
+let send_sound = new Audio('audio/send.wav');
+let normal_alert = new Audio('audio/alert.wav');
+let distorted_alert = new Audio('audio/distorted-alert.wav');
+let very_distorted_alert = new Audio('audio/very-distorted-alert.wav');
+function playAlert(characterName) {
+    audio = normal_alert;
+    if (characterName == "Arﾅ}od") {
+        audio = very_distorted_alert;
+    }
+    audio.volume = 0.2
+    audio.play();
+}
 
 const PLAYABLE_CHARACTER_NAME = 'Longwei'
 const CHARACTERS = {
     "Wade": "images/wade.jpg",
     "Ari": "images/ari.jpg",
-    "Longwei": "https://image.flaticon.com/icons/svg/2534/2534254.svg",
+    "Longwei": "images/longwei.jpg",
     "Rin": "images/rin.jpg",
-    "Arnold": "https://image.flaticon.com/icons/svg/1616/1616446.svg",
+    "Arnold": "images/arnold.png",
+    "Arﾅ}od": "images/arnoooold.png",
+    "hinerz": "images/hinerz.png",
+    'Lottie': 'images/lottie.jpg',
+    'Reena': 'images/reena.jpg',
+    'Sam': 'images/sam.jpg',
 }
 
 function ChangeChat() {
@@ -157,13 +418,12 @@ function ChangeChat() {
   // Remove black screen
 }
 
-function updateClock() {
+function realLifeTime() {
     var now = new Date();
     time.innerHTML = now.getHours() + ':' + (now.getMinutes()<10?'0':'') + now.getMinutes();
     // call this function again in 1000ms
     setTimeout(updateClock, 1000);
 }
-updateClock(); // initial call
 
 let currScrollTop = 0;
 
@@ -176,8 +436,9 @@ blackScreen.addEventListener("click", event => {
 });
 
 function clickEvent() {
-  // if case to remove race condition
-  console.log("Click event registered, current index ", INDEX);
+  if (REMOVING) {
+    return;
+  }
   const charName = SCRIPT[INDEX][0];
   if (charName == "") {
       addAdminNotice(SCRIPT[INDEX][1]);
@@ -185,6 +446,11 @@ function clickEvent() {
   }
   else if (charName == "EFFECT") {
       const effectName = SCRIPT[INDEX][1]
+      if (effectName == 'REMOVE') {
+          REMOVING = true;
+          numberOfChatsToRemove = SCRIPT[INDEX][2];
+          removeChatBubbles(2);
+      }
       if (effectName == 'BLACK SCREEN') {
         delay = 0;
         setTimeout(() => {
@@ -208,10 +474,13 @@ function clickEvent() {
             if (overlay.parentNode){
                 overlay.parentNode.removeChild(overlay);
             }
-        }, delay);
-       
+        }, delay);  
       }
-      else if (effectName == 'CHANGE CHAT') {
+      else if (effectName == 'CLEAR_CHAT') {
+          removeChatBubbles(0);
+      }   
+      else if (effectName == 'SET_CHAT') {
+        title.innerHTML = SCRIPT[INDEX][2];
       }
       INDEX += SCRIPT[INDEX][3];
   }
@@ -225,9 +494,7 @@ function clickEvent() {
       const delay = msgText.split(" ").length * 10;
       setTimeout(() => {
         appendMessage(charName, CHARACTERS[charName], "left", msgText, imagePath);
-        var audio = new Audio('audio/alert.wav');
-        audio.volume = 0.2
-        audio.play();
+        playAlert(charName);
       }, delay);
       WAIT_FOR_PLAYER = SCRIPT[INDEX][4];
       INDEX += SCRIPT[INDEX][3];
@@ -248,7 +515,6 @@ function fillChoices(choices, results) {
       const index = element.querySelector(".msger-input").name;
       if (!msgText) return;
       appendMessage(charName, CHARACTERS[charName], "right", msgText);
-      var audio = new Audio('audio/send.wav');
       audio.play();
       console.log("Selected index ", index);
       console.log("Results ", results);
@@ -322,6 +588,17 @@ function appendMessage(name, img, side, text, image_path) {
   msgerChat.scrollTop += height;
 }
 
+function removeChatBubbles(number_to_remove) {
+    if (!number_to_remove) {
+        number_to_remove = chatArea.childNodes.length;
+    }
+    for (let i = 1; i <= number_to_remove*2; i++) {
+        let children = chatArea.childNodes
+        console.log(children);
+        chatArea.removeChild(children[children.length-1]);
+    }
+    REMOVING = false;
+}
 
 // Utils
 function get(selector, root = document) {
