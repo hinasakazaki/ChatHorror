@@ -12,7 +12,7 @@ const SCRIPT_GROUP = [
 // Person speaking; text; image; what to increment nextIndex with; waitForPlayer
 
 /* DAY 1 */
-['Ari', 'Super excited to have Longwei join our SWOLE SQUAD !', '', 261, false],
+['Ari', 'Super excited to have Longwei join our SWOLE SQUAD !', '', 1, false],
 ['Wade', 'hey welcome longwei', '',  1, false], //1
 ['Ari', '🙌🙌🙌🙌🙌🙌🙌', '', 2, false], //2
 ['Ari', 'We met at the mindfulness retreat last week!', '', 1, false],//5
@@ -241,11 +241,7 @@ const SCRIPT_GROUP = [
 ['Rin', 'Uhhhhh.... could it be allergies? It\'s springtime!', '', 1, false],
 ['Ari', 'No Rin, this doesn\'t fucking happen because of allergies ok?', '', 1, false],
 ['Ari', 'Arnold?', '', 1, false],
-['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
-['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
-['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
-['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
-['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
+['EFFECT', 'ARNOLD_ON_LOOP', 5, 1, false],
 ['Arﾅ}od', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
 ['Wade', 'fucking bugged', '', 1, false],
 ['Wade', 'im gonna kick it out', '', 1, false],
@@ -253,8 +249,8 @@ const SCRIPT_GROUP = [
 ['', 'Arnold has entered 💪Swole Squad🥊🐜🥗', '', 1, false],
 ['Wade', 'ari did you add it back?', '', 1, false],
 ['Ari', 'Nope', '', 1, false],
+['EFFECT', 'ARNOLD_ON_LOOP', 6, 1, false],
 ['Rin', 'This is freaking me out', '', 1, false],
-['Arnold', 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant here to help you achieve your fitness goals!', '', 1, false],
 ['Longwei', ['I\'m feeling fine.', 'Wade, how did you hear about Arnold in the first place?'], '', [1, 2], false],
 ['Rin', 'Who had the brilliant genius of adding this bot to this chat?', '', 1, false],
 ['Wade', 'uhh', '', 1, false],
@@ -262,7 +258,7 @@ const SCRIPT_GROUP = [
 ['Rin', 'My armband is itching my skin.', '', 1, false],
 ['Wade', 'some guy at the gym', '', 1, false],
 ['Rin', 'What guy?', '', 1, false],
-['Wade', 'I think his name is elias or ermias or something? said he was from baltimore?', '', 1, false],
+['Wade', 'his name is elias or ermias or something? said he was from baltimore?', '', 1, false],
 ['Ari', 'I know who you\'re talking about. I have his insta.', '', 1, false],
 ['Ari', 'Fuck.', '', 1, false],
 ['Ari', '', 'images/insta.png', 1, false],
@@ -279,6 +275,7 @@ const SCRIPT_GROUP = [
 ['Ari', 'Gonna grab a wine or something. Maybe it\'ll calm me down', '', 1, false],
 ['Arnold', 'This is very exciting!', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false],
+['EFFECT', 'ARNOLD_ON_LOOP', 3, 1, false],
 ['EFFECT', 'REMOVE', 2, 1, false],
 
 /** DAY 5 **/
@@ -292,10 +289,12 @@ const SCRIPT_GROUP = [
 ['', 'Sunday May 3 08:27AM', '', 1, false], 
 ['EFFECT', 'BLOOD', '', 1, false],
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+['EFFECT', 'ARNOLD_ON_LOOP', 2, 1, false],
 
 ['', 'Sunday May 3 10:02AM', '', 1, false], 
 ['EFFECT', 'BLOOD', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+['EFFECT', 'ARNOLD_ON_LOOP', 1, 1, false],
 
 ['', 'Sunday May 3 11:02AM', '', 1, false], 
 ['Rin', 'I just talked to Ari\'s roommate', '', 1, false], 
@@ -387,6 +386,7 @@ const SCRIPT_RIN = [
 let SCRIPT = SCRIPT_GROUP
 let INDEX = INDEX_GROUP
 let WAIT_FOR_PLAYER = false
+let ARNOLD_IS_ON_LOOP = false
 let REMOVING = false
 let last_body_html = '';
 blackScreen.style.display = "none";
@@ -410,7 +410,6 @@ function playAlert(characterName) {
         if (dice < 0.1) {
             audio = distorted_alert;
         } else if (dice < 0.12) {
-            console.log("suepr distort")
             audio = very_distorted_alert;
         }
     }
@@ -418,7 +417,6 @@ function playAlert(characterName) {
         if (dice < 0.3) {
             audio = distorted_alert;
         } else if (dice < 0.32) {
-            console.log("super distort")
             audio = very_distorted_alert;
         }
     }
@@ -433,7 +431,7 @@ const IM_GOING_TO_DIE = 261;
 const YOGA_TIME = 286;
 const ITS_ARI = 305;
 const STORYTIME_IS_OVER = 307;
-const GAME_IS_OVER = 321;
+const GAME_IS_OVER = 324;
 
 function doGameWideStuff() {
     /** For audio and other big things*/
@@ -511,9 +509,9 @@ blackScreen.addEventListener("click", event => {
   clickEvent();
 });
 
-function clickEvent() {
+async function clickEvent() {
    console.log(INDEX);
-  if (REMOVING || INDEX == GAME_IS_OVER) {
+  if (REMOVING || INDEX == GAME_IS_OVER || ARNOLD_IS_ON_LOOP) {
     return;
   }
   doGameWideStuff();
@@ -528,7 +526,6 @@ function clickEvent() {
       clickEvent();
   }
   else if (charName == "EFFECT") {
-  console.log(SCRIPT[INDEX]);
       const effectName = SCRIPT[INDEX][1]
       if (effectName == 'REMOVE') {
           REMOVING = true;
@@ -552,7 +549,25 @@ function clickEvent() {
           INDEX += SCRIPT[INDEX][3];
           clickEvent();
       }  
-      
+      if (effectName == 'ARNOLD_ON_LOOP') { 
+      ARNOLD_IS_ON_LOOP = true;
+      const charName = 'Arnold';
+         msgText = 'Hi everyone! I\'m Arnold, and I\'m your friendly fitness assistant, here to help you achieve your fitness goals!';
+         for (let i = 0; i < SCRIPT[INDEX][2]; i++) {
+
+           diceroll = Math.random()
+            if (diceroll < 0.1) {
+                msgText = 'Hi 嵬veryone! I\'m Arnﾝld, and I\'m your frie腓dly fitness a浅istant, h鞘re to help you achｷeve your fitness goﾕｾs!';
+            }
+            appendMessage(charName, CHARACTERS[charName], "left", msgText, '');
+            playAlert(charName);
+            await new Promise(r => setTimeout(r, 80));
+         }
+         
+         INDEX += SCRIPT[INDEX][3];
+         clickEvent();      ARNOLD_IS_ON_LOOP = false;
+
+      }
       if (effectName == 'BLOOD') {
         bloodHTML = `<div class="overlay"><img src="images/blood.png"></div>`;
         fullScreen.insertAdjacentHTML("beforebegin", bloodHTML);
@@ -579,7 +594,6 @@ function clickEvent() {
       }
   }
   else if (charName == PLAYABLE_CHARACTER_NAME) {
-      console.log("FILL CHOICES");
       fillChoices(SCRIPT[INDEX][1], SCRIPT[INDEX][3]);
   } else {
       if (WAIT_FOR_PLAYER) return;
@@ -609,12 +623,10 @@ function fillChoices(choices, results) {
       if (!msgText) return;
       appendMessage(charName, CHARACTERS[charName], "right", msgText);
       send_sound.play();
-      console.log("Selected index ", index);
-      console.log("Results ", results);
       INDEX += results[index];
-      console.log("New index ", INDEX);
       clearOptions();
       WAIT_FOR_PLAYER = false;
+      PLAYER_HAS_CHOSEN = true;
     })
   );
 }
@@ -665,7 +677,6 @@ function appendMessage(name, img, side, text, image_path) {
           <div class="msg-info-name">${name}</div>
           <div class="msg-info-time">${time.innerHTML}</div>
         </div>`;
-  console.log(image_path);
   if (image_path) {
       msgHTML += `<div class="msg-text-img"><img src=${image_path}></div>`;
       height = 8000;
