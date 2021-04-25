@@ -76,7 +76,7 @@ img {
 }
 
 .msg-text-img {
-  height: 10%;
+  max-height: 10%; 
 }
 
 .msger-chat {
@@ -117,7 +117,7 @@ img {
   border-radius: 50%;
 }
 .msg-bubble {
-  max-width: 450px;
+  max-width: 70%;
   padding: 15px;
   border-radius: 15px;
   background: var(--left-msg-bg);
