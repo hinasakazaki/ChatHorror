@@ -400,7 +400,7 @@ const PLAYABLE_CHARACTER_NAME = 'Longwei'
 const CHARACTERS = {
     "Wade": "images/wade.jpg",
     "Ari": "images/ari.jpg",
-    "Longwei": "images/longwei.jpg",
+    "Longwei": "images/longwei.JPG",
     "Rin": "images/rin.jpg",
     "Arnold": "images/arnold.png",
     "Arﾅ}od": "images/arnoooold.png",
