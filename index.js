@@ -290,11 +290,14 @@ const SCRIPT_GROUP = [
 ['EFFECT', 'BLOOD', '', 1, false],
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
 ['EFFECT', 'ARNOLD_ON_LOOP', 2, 1, false],
+['Wade', '|荒ﾛY肪a・c, l・・E|ｫﾇﾋ･・q"}ｪ驕HS !ﾆ7玽_`|xｱｭR', '', 1, false],
+
 
 ['', 'Sunday May 3 10:02AM', '', 1, false], 
 ['EFFECT', 'BLOOD', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
 ['EFFECT', 'ARNOLD_ON_LOOP', 1, 1, false],
+['Ari', 'ZW>ﾌ・疽籬鎧}ｯ歪[u廷t(8・bｶｾ.x雰・yﾒｲ*ｲ(_ﾗｭ7烟', '', 1, false],
 
 ['', 'Sunday May 3 11:02AM', '', 1, false], 
 ['Rin', 'I just talked to Ari\'s roommate', '', 1, false], 
@@ -321,11 +324,13 @@ const SCRIPT_GROUP = [
 ['', 'Sunday May 3 09:27PM', '', 1, false],  
 ['EFFECT', 'BLOOD', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+['Rin', '脛ｽｫ>ﾐｦ低ゐ≫・@徨怜ﾃ/ﾚｫ稷_<ﾝ?', '', 1, false],
 
 /* Implied Longwei's death */
 ['', 'Monday May 4 09:08AM', '', 1, false], 
 ['EFFECT', 'BLOOD', '', 1, false], 
 ['Arﾅ}od', '・鞘ｷ｡ｹｼ嵬ﾕｴﾖ浅 腓q・ﾕｾ｣ｧｬﾝﾝh2.同!!', '', 1, false], 
+['Long荿ei', 'ﾓ7・ｪｱ荿?Nﾎ+SN・㌻r・ﾊ-<KｲｫGﾒ｡熹ﾘIｭ]3T暖ｧｸ1>', '', 1, false], 
 
 /* Epilogue */
 ['EFFECT', 'CLEAR_CHAT', '', 1, false], 
@@ -425,13 +430,13 @@ function playAlert(characterName) {
 }
 
 const WHY_CANT_WE_KICK_IT_OUT = 220;
-const OH_NO = 255;
+const OH_NO = 253;
 const THIS_IS_SCARY = 260;
 const IM_GOING_TO_DIE = 261;
-const YOGA_TIME = 286;
-const ITS_ARI = 305;
-const STORYTIME_IS_OVER = 307;
-const GAME_IS_OVER = 324;
+const YOGA_TIME = 292;
+const ITS_ARI = 309;
+const STORYTIME_IS_OVER = 313;
+const GAME_IS_OVER = 328;
 
 function doGameWideStuff() {
     /** For audio and other big things*/
@@ -482,6 +487,7 @@ const CHARACTERS = {
     'Lottie': 'images/lottie.jpg',
     'Reena': 'images/reena.jpg',
     'Sam': 'images/sam.jpg',
+    'Long荿ei': "images/longwei.JPG",
 }
 
 function ChangeChat() {
@@ -597,11 +603,15 @@ async function clickEvent() {
       fillChoices(SCRIPT[INDEX][1], SCRIPT[INDEX][3]);
   } else {
       if (WAIT_FOR_PLAYER) return;
+      let side = 'left';
       const msgText = SCRIPT[INDEX][1];
       const imagePath = SCRIPT[INDEX][2];
       const delay = msgText.split(" ").length * 10;
+      if (charName == 'Long荿ei') {
+          side = 'right';
+      }
       setTimeout(() => {
-        appendMessage(charName, CHARACTERS[charName], "left", msgText, imagePath);
+        appendMessage(charName, CHARACTERS[charName], side, msgText, imagePath);
         playAlert(charName);
       }, delay);
       WAIT_FOR_PLAYER = SCRIPT[INDEX][4];
